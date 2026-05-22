@@ -1,125 +1,496 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JL Studios 2015</title>
+  <meta name="description" content="Raf Culfa — Videographer, Film Director, Cinematographer. Cinematic productions worldwide, based in Antalya, Turkey." />
+  <meta property="og:title" content="RAF CULFA — Film Director · Videographer · Cinematographer" />
+  <meta property="og:description" content="Professional cinematic productions of any scale. Based in Antalya, Turkey." />
+  <title>RAF CULFA — Film Director · Videographer · Cinematographer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav__logo">JL Studios</div>
+  <!-- ═══ NAVIGATION ══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav__logo">RAF CULFA</a>
+
     <ul class="nav__links">
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#projects">Проекты</a></li>
-      <li><a href="#contact">Контакты</a></li>
+      <li><a href="#about"     data-i18n="nav.about">About</a></li>
+      <li><a href="#services"  data-i18n="nav.services">Services</a></li>
+      <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="#team"      data-i18n="nav.team">Team</a></li>
+      <li><a href="#studio"    data-i18n="nav.studio">Studio</a></li>
+      <li><a href="#contact"   data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <button class="nav__burger" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav__right">
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="tr">TR</button>
+      </div>
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/905000000000" target="_blank" class="nav__wa" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="nav.book">Book</span>
+      </a>
+      <button class="nav__burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- ═══ HERO ════════════════════════════════════════════════ -->
   <section class="hero" id="home">
+    <!-- Showreel video background (replace src with actual video) -->
+    <div class="hero__video-wrap">
+      <video class="hero__video" autoplay muted loop playsinline poster="poster.jpg">
+        <!-- <source src="showreel.mp4" type="video/mp4"> -->
+      </video>
+      <!-- Cinematic gradient overlay -->
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Cinematic letterbox bars -->
+    <div class="letterbox letterbox--top"></div>
+    <div class="letterbox letterbox--bottom"></div>
+
     <div class="hero__content">
-      <p class="hero__greeting">Привет, я</p>
-      <h1 class="hero__name">JL Studios <span class="accent">2015</span></h1>
-      <p class="hero__tagline">Разработка · Дизайн · Творчество</p>
+      <p class="hero__pre" data-i18n="hero.pre">Film Director · Cinematographer</p>
+      <h1 class="hero__name">RAF CULFA</h1>
+      <p class="hero__tagline" data-i18n="hero.tagline">Videographer · Director · Cinematographer</p>
+      <p class="hero__sub" data-i18n="hero.sub">Creating cinematic visuals worldwide.</p>
       <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">Мои проекты</a>
-        <a href="#contact" class="btn btn--outline">Связаться</a>
+        <a href="#portfolio" class="btn btn--gold" data-i18n="hero.cta1">View Portfolio</a>
+        <a href="#contact"   class="btn btn--outline" data-i18n="hero.cta2">Book a Project</a>
       </div>
     </div>
-    <div class="hero__bg">
-      <div class="blob blob--1"></div>
-      <div class="blob blob--2"></div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ═══ ABOUT ═══════════════════════════════════════════════ -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section__title">Обо мне</h2>
       <div class="about__grid">
-        <div class="about__text">
-          <p>
-            Я занимаюсь разработкой и дизайном с 2015 года. Моя цель —
-            создавать качественные, продуманные и красивые вещи, которые
-            работают именно так, как нужно пользователю.
-          </p>
-          <p>
-            Работаю с веб-технологиями, мобильными приложениями и
-            творческими проектами. Каждый проект — это возможность
-            сделать что-то действительно стоящее.
-          </p>
+        <div class="about__visual">
+          <div class="about__img-wrap">
+            <!-- Replace with actual photo -->
+            <div class="about__img-placeholder"></div>
+            <div class="about__img-frame"></div>
+          </div>
         </div>
-        <div class="skills">
-          <div class="skill-tag">HTML / CSS</div>
-          <div class="skill-tag">JavaScript</div>
-          <div class="skill-tag">UI / UX Design</div>
-          <div class="skill-tag">React</div>
-          <div class="skill-tag">Node.js</div>
-          <div class="skill-tag">Git</div>
+        <div class="about__content">
+          <p class="label" data-i18n="about.label">About</p>
+          <h2 class="section__title" data-i18n="about.title">The Director Behind the Frame</h2>
+          <p class="about__text" data-i18n="about.p1">
+            Raf Culfa is a videographer, film director, and cinematographer based in Antalya, Turkey.
+            Specializing in cinematic storytelling, live productions, music videos, commercial content,
+            conferences, concerts, and creative filmmaking — he leads every project from concept to final cut.
+          </p>
+          <p class="about__text" data-i18n="about.p2">
+            His work combines directing, cinematic composition, lighting, atmosphere, storytelling,
+            and production management. Working together with a professional production team and studio
+            resources, Raf Culfa creates visuals designed to feel cinematic, emotional, modern, and powerful.
+          </p>
+          <p class="about__note" data-i18n="about.note">Also known as Rafik Culfa</p>
+          <div class="about__roles">
+            <span class="role-tag" data-i18n="role.director">Film Director</span>
+            <span class="role-tag" data-i18n="role.video">Videographer</span>
+            <span class="role-tag" data-i18n="role.cine">Cinematographer</span>
+            <span class="role-tag" data-i18n="role.producer">Creative Producer</span>
+            <span class="role-tag" data-i18n="role.creative">Creative Director</span>
+            <span class="role-tag" data-i18n="role.filmmaker">Filmmaker</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="section section--dark" id="projects">
+  <!-- ═══ SERVICES ════════════════════════════════════════════ -->
+  <section class="section section--dark" id="services">
     <div class="container">
-      <h2 class="section__title">Проекты</h2>
-      <div class="projects__grid">
+      <div class="section__header">
+        <p class="label" data-i18n="services.label">Services</p>
+        <h2 class="section__title" data-i18n="services.title">What I Create</h2>
+        <p class="section__sub" data-i18n="services.sub">From intimate love stories to large-scale live productions.</p>
+      </div>
+      <div class="services__grid">
 
-        <div class="card">
-          <div class="card__icon">🚀</div>
-          <h3 class="card__title">Проект 1</h3>
-          <p class="card__desc">Краткое описание проекта. Чем занимается, какие технологии использованы.</p>
-          <a href="#" class="card__link">Посмотреть →</a>
+        <div class="service-card">
+          <div class="service-card__num">01</div>
+          <h3 class="service-card__title" data-i18n="srv.mv">Music Videos</h3>
+          <p class="service-card__desc" data-i18n="srv.mv.desc">Creative and cinematic music video productions — from concept to final edit.</p>
         </div>
 
-        <div class="card">
-          <div class="card__icon">🎨</div>
-          <h3 class="card__title">Проект 2</h3>
-          <p class="card__desc">Краткое описание проекта. Чем занимается, какие технологии использованы.</p>
-          <a href="#" class="card__link">Посмотреть →</a>
+        <div class="service-card">
+          <div class="service-card__num">02</div>
+          <h3 class="service-card__title" data-i18n="srv.concerts">Concerts</h3>
+          <p class="service-card__desc" data-i18n="srv.concerts.desc">Live concert filming, aftermovies, and multi-camera event coverage.</p>
         </div>
 
-        <div class="card">
-          <div class="card__icon">⚡</div>
-          <h3 class="card__title">Проект 3</h3>
-          <p class="card__desc">Краткое описание проекта. Чем занимается, какие технологии использованы.</p>
-          <a href="#" class="card__link">Посмотреть →</a>
+        <div class="service-card">
+          <div class="service-card__num">03</div>
+          <h3 class="service-card__title" data-i18n="srv.events">Conferences & Events</h3>
+          <p class="service-card__desc" data-i18n="srv.events.desc">Professional multi-camera coverage for business events and conferences.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">04</div>
+          <h3 class="service-card__title" data-i18n="srv.wedding">Weddings</h3>
+          <p class="service-card__desc" data-i18n="srv.wedding.desc">Luxury cinematic wedding films — emotional, elegant, timeless.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">05</div>
+          <h3 class="service-card__title" data-i18n="srv.love">Love Story</h3>
+          <p class="service-card__desc" data-i18n="srv.love.desc">Emotional and artistic couple films full of atmosphere and feeling.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">06</div>
+          <h3 class="service-card__title" data-i18n="srv.commercial">Commercials & Brand</h3>
+          <p class="service-card__desc" data-i18n="srv.commercial.desc">Advertising, commercials, and branded content for any platform.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">07</div>
+          <h3 class="service-card__title" data-i18n="srv.reels">Reels & Social</h3>
+          <p class="service-card__desc" data-i18n="srv.reels.desc">Modern high-impact content designed for Instagram, TikTok, YouTube.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">08</div>
+          <h3 class="service-card__title" data-i18n="srv.shortfilm">Short Films</h3>
+          <p class="service-card__desc" data-i18n="srv.shortfilm.desc">Creative cinematic storytelling projects — from script to screen.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__num">09</div>
+          <h3 class="service-card__title" data-i18n="srv.studio">Studio Productions</h3>
+          <p class="service-card__desc" data-i18n="srv.studio.desc">Professional productions inside a fully-equipped studio environment.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- ═══ PORTFOLIO ════════════════════════════════════════════ -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section__header">
+        <p class="label" data-i18n="portfolio.label">Portfolio</p>
+        <h2 class="section__title" data-i18n="portfolio.title">Selected Work</h2>
+      </div>
+
+      <!-- Category filter -->
+      <div class="portfolio__filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">All</button>
+        <button class="filter-btn" data-filter="music"      data-i18n="filter.music">Music Videos</button>
+        <button class="filter-btn" data-filter="concert"    data-i18n="filter.concerts">Concerts</button>
+        <button class="filter-btn" data-filter="wedding"    data-i18n="filter.weddings">Weddings</button>
+        <button class="filter-btn" data-filter="commercial" data-i18n="filter.commercial">Commercial</button>
+        <button class="filter-btn" data-filter="events"     data-i18n="filter.events">Events</button>
+      </div>
+
+      <div class="portfolio__grid">
+
+        <div class="portfolio-item" data-category="music">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">Music Video — Artist Name</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.music">Music Video</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item portfolio-item--wide" data-category="concert">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">Concert Aftermovie 2024</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.concerts">Concert</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="wedding">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">Cinematic Wedding Film</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.weddings">Wedding</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="commercial">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">Brand Commercial</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.commercial">Commercial</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="music">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">Music Video — Director's Cut</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.music">Music Video</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="events">
+          <div class="portfolio-item__thumb">
+            <div class="portfolio-item__play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="portfolio-item__overlay">
+              <h3 class="portfolio-item__title">International Conference</h3>
+              <p class="portfolio-item__cat" data-i18n="filter.events">Event</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUCTION / TEAM ════════════════════════════════════ -->
+  <section class="section section--dark" id="team">
+    <div class="container">
+      <div class="team__grid">
+        <div class="team__content">
+          <p class="label" data-i18n="team.label">Production</p>
+          <h2 class="section__title" data-i18n="team.title">Not One Person. A Full Team.</h2>
+          <p class="team__text" data-i18n="team.p1">
+            Every project is built around a professional production team led by Raf Culfa.
+            Together we deliver cinema-level productions for any scale and any format.
+          </p>
+          <div class="team__capabilities">
+            <div class="capability">
+              <div class="capability__icon">🎬</div>
+              <div>
+                <h4 data-i18n="cap.direction">Direction & Concept</h4>
+                <p data-i18n="cap.direction.desc">Creative direction and full project leadership from pre-production to delivery.</p>
+              </div>
+            </div>
+            <div class="capability">
+              <div class="capability__icon">📷</div>
+              <div>
+                <h4 data-i18n="cap.camera">Camera Operators</h4>
+                <p data-i18n="cap.camera.desc">Professional multi-camera teams for any production scale.</p>
+              </div>
+            </div>
+            <div class="capability">
+              <div class="capability__icon">💡</div>
+              <div>
+                <h4 data-i18n="cap.lighting">Lighting Crew</h4>
+                <p data-i18n="cap.lighting.desc">Professional lighting setups to create the exact cinematic atmosphere needed.</p>
+              </div>
+            </div>
+            <div class="capability">
+              <div class="capability__icon">🎞️</div>
+              <div>
+                <h4 data-i18n="cap.post">Post-Production</h4>
+                <p data-i18n="cap.post.desc">Professional editing, color grading, and full post-production workflow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team__visual">
+          <div class="team__img-placeholder"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STUDIO ═══════════════════════════════════════════════ -->
+  <section class="section" id="studio">
+    <div class="container">
+      <div class="section__header">
+        <p class="label">JL Studios Antalya</p>
+        <h2 class="section__title" data-i18n="studio.title">Professional Studio Access</h2>
+        <p class="section__sub" data-i18n="studio.sub">
+          Every project benefits from our fully-equipped private studio in Antalya.
+        </p>
+      </div>
+      <div class="studio__features">
+        <div class="studio-feat">
+          <div class="studio-feat__icon">⬜</div>
+          <h4 data-i18n="studio.cyclo">Cyclorama</h4>
+          <p data-i18n="studio.cyclo.desc">Large seamless white cyclorama wall for clean, professional shots.</p>
+        </div>
+        <div class="studio-feat">
+          <div class="studio-feat__icon">💧</div>
+          <h4 data-i18n="studio.water">Water Zone</h4>
+          <p data-i18n="studio.water.desc">Dedicated water zone for creative and dramatic visual sequences.</p>
+        </div>
+        <div class="studio-feat">
+          <div class="studio-feat__icon">💡</div>
+          <h4 data-i18n="studio.light">Professional Lighting</h4>
+          <p data-i18n="studio.light.desc">Full professional lighting equipment for any shooting style.</p>
+        </div>
+        <div class="studio-feat">
+          <div class="studio-feat__icon">🎭</div>
+          <h4 data-i18n="studio.space">Creative Spaces</h4>
+          <p data-i18n="studio.space.desc">Multiple creative filming environments within a single location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BEHIND THE SCENES ════════════════════════════════════ -->
+  <section class="section section--dark" id="bts">
+    <div class="container">
+      <div class="section__header">
+        <p class="label" data-i18n="bts.label">Behind The Scenes</p>
+        <h2 class="section__title" data-i18n="bts.title">The Work Behind the Work</h2>
+        <p class="section__sub" data-i18n="bts.sub">Directing, filming, building — a look inside the production process.</p>
+      </div>
+      <div class="bts__grid">
+        <div class="bts-item bts-item--tall"><div class="bts-item__inner"></div></div>
+        <div class="bts-item"><div class="bts-item__inner"></div></div>
+        <div class="bts-item"><div class="bts-item__inner"></div></div>
+        <div class="bts-item bts-item--wide"><div class="bts-item__inner"></div></div>
+        <div class="bts-item"><div class="bts-item__inner"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ══════════════════════════════════════════════ -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section__title">Контакты</h2>
-      <p class="contact__sub">Есть идея или вопрос? Напишите — отвечу быстро.</p>
-      <div class="contact__links">
-        <a href="mailto:jlstudios2015@gmail.com" class="contact__item">
-          <span class="contact__icon">✉️</span>
-          jlstudios2015@gmail.com
-        </a>
-        <a href="https://github.com/jlstudios2015" target="_blank" class="contact__item">
-          <span class="contact__icon">🐙</span>
-          github.com/jlstudios2015
-        </a>
+      <div class="contact__wrap">
+        <div class="contact__info">
+          <p class="label" data-i18n="contact.label">Contact</p>
+          <h2 class="section__title" data-i18n="contact.title">Let's Create Something</h2>
+          <p class="contact__text" data-i18n="contact.text">
+            Ready to bring your vision to life? Reach out — and let's talk about your project.
+          </p>
+          <div class="contact__channels">
+            <a href="https://wa.me/905000000000" target="_blank" class="contact-ch">
+              <div class="contact-ch__icon contact-ch__icon--wa">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="contact.wa">WhatsApp</strong>
+                <span>+90 500 000 00 00</span>
+              </div>
+            </a>
+            <a href="mailto:jlstudios2015@gmail.com" class="contact-ch">
+              <div class="contact-ch__icon">✉️</div>
+              <div>
+                <strong data-i18n="contact.email">Email</strong>
+                <span>jlstudios2015@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/jlstudios2015" target="_blank" class="contact-ch">
+              <div class="contact-ch__icon">📸</div>
+              <div>
+                <strong>Instagram</strong>
+                <span>@jlstudios2015</span>
+              </div>
+            </a>
+            <div class="contact-ch contact-ch--static">
+              <div class="contact-ch__icon">📍</div>
+              <div>
+                <strong data-i18n="contact.location">Location</strong>
+                <span data-i18n="contact.city">Antalya, Turkey</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3 class="contact-form__title" data-i18n="form.title">Send a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname" data-i18n="form.name">Your Name</label>
+              <input type="text" id="fname" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="femail" data-i18n="form.email">Email / WhatsApp</label>
+              <input type="text" id="femail" name="contact" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fproject" data-i18n="form.project">Project Type</label>
+            <select id="fproject" name="project">
+              <option value="" data-i18n="form.select">Select...</option>
+              <option value="music" data-i18n="srv.mv">Music Video</option>
+              <option value="concert" data-i18n="filter.concerts">Concert</option>
+              <option value="wedding" data-i18n="srv.wedding">Wedding</option>
+              <option value="commercial" data-i18n="srv.commercial">Commercial</option>
+              <option value="event" data-i18n="srv.events">Event / Conference</option>
+              <option value="shortfilm" data-i18n="srv.shortfilm">Short Film</option>
+              <option value="other" data-i18n="form.other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg" data-i18n="form.message">Tell me about your project</label>
+            <textarea id="fmsg" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full" data-i18n="form.send">Send Message</button>
+          <p class="form__success" id="formSuccess" data-i18n="form.success">Thank you! I'll be in touch soon.</p>
+        </form>
       </div>
     </div>
   </section>
 
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
   <footer class="footer">
-    <p>© 2015–2026 JL Studios. Сделано с ❤️</p>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">RAF CULFA</div>
+        <p class="footer__tagline" data-i18n="hero.tagline">Videographer · Director · Cinematographer</p>
+      </div>
+      <div class="footer__links">
+        <a href="#about"     data-i18n="nav.about">About</a>
+        <a href="#services"  data-i18n="nav.services">Services</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#contact"   data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/jlstudios2015" target="_blank" aria-label="Instagram">IG</a>
+        <a href="https://wa.me/905000000000" target="_blank" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2015–2026 JL Studios · Raf Culfa. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <p data-i18n="footer.location">Antalya, Turkey · Worldwide</p>
+    </div>
   </footer>
 
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/905000000000" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="lang.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
